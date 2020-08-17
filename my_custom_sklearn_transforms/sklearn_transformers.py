@@ -19,7 +19,7 @@ class Smote(BaseEstimator, TransformerMixin):
     def __init__(self, columns):
         self.columns = columns
 
-    def fit(self, X, y=None):
+    def fit(self, X, y):
     	X, y = SMOTE(random_state=0).fit_resample(X, y)
         return X, y
 
