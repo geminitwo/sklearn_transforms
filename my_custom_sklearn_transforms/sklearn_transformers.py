@@ -10,8 +10,8 @@ class DropColumns(BaseEstimator, TransformerMixin):
 		data = X.copy()
 		return data.drop(labels=self.columns, axis='columns')
 class Smote(BaseEstimator, TransformerMixin):
-	def __init__(self, columns):
-		self.columns = columns
+	def __init__(self):
+		pass
 	def fit(self, X, y):
 		X, y = SMOTE(random_state=0).fit_resample(X, y)
 		return X, y
