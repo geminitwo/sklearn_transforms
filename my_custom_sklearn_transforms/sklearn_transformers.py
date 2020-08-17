@@ -9,11 +9,11 @@ class DropColumns(BaseEstimator, TransformerMixin):
 	def transform(self, X):
 		data = X.copy()
 		return data.drop(labels=self.columns, axis='columns')
-class SmoteBel(BaseEstimator, TransformerMixin):
+
+class SmoteBel(object):
 	def __init__(self):
 		pass
 	def fit(self, X, y):
 		X, y = SMOTE(random_state=0).fit_resample(X, y)
+		X = pd.DataFrame(X, columns=X.columns)
 		return X, y
-	def transform(self, X):
-		pass
