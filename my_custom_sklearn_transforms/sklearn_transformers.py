@@ -9,7 +9,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
 	def transform(self, X):
 		data = X.copy()
 		return data.drop(labels=self.columns, axis='columns')
-class Smote(BaseEstimator, TransformerMixin):
+class SmoteBel(BaseEstimator, TransformerMixin):
 	def __init__(self):
 		pass
 	def fit(self, X, y):
