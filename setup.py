@@ -16,5 +16,5 @@ setup(
             'my_custom_sklearn_transforms'
       ],
       zip_safe=False,
-      install_requires=['imblearn']
+      install_requires=['Imbalanced-Learn==0.4.2']
 )
