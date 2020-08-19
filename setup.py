@@ -1,6 +1,5 @@
 from setuptools import setup
 
-
 setup(
       name='my_custom_sklearn_transforms',
       version='1.0',
@@ -16,5 +15,5 @@ setup(
             'my_custom_sklearn_transforms'
       ],
       zip_safe=False,
-      install_requires=['Imbalanced-Learn==0.4.2']
+      install_requires=['imbalanced-learn==0.4.3']
 )
